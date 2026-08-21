@@ -12,7 +12,7 @@ Requires KPM (modern jailbreaks ship with it pre-installed). From `kterm`:
 
 ```
 KPM=/var/local/kmc/bin/kpm
-$KPM add-repo https://sysmon.nealing.net/manifest.json
+$KPM add-repo https://nealing.net/manifest.json
 $KPM -y update
 $KPM -y install sysmon
 $KPM launch sysmon
@@ -21,10 +21,10 @@ $KPM launch sysmon
 (From the search bar instead, type each line separately as `;kpm ...` — see
 [Install details](#install-details) for why the commands differ slightly.)
 
-Want all of this author's Kindle packages (this + `dropbear-ssh`) from one
-`add-repo`? Use `https://nealing.net/manifest.json` instead of the URL
-above — same packages, same versions, just combined. The per-package URL
-above keeps working unchanged either way.
+`https://nealing.net/manifest.json` is this author's combined repo — it also
+has [dropbear-ssh](https://github.com/akshaylahudkar/dropbear-ssh). The old
+`sysmon.nealing.net/manifest.json` URL still works too, it just redirects
+here now.
 
 ## What it shows
 
@@ -54,12 +54,13 @@ loop — relaunch the app to reset that window.
   on your `PATH`, so bare `kpm` fails with `not found` there. The search
   bar's own `;kpm` wiring resolves the path for you already, so no full path
   needed for that one.
-- **What `sysmon.nealing.net` is**: a Cloudflare Worker that transparently
-  proxies this repo's `manifest.json`/`.kpkg` straight from GitHub — shorter
-  to type than the raw GitHub URL, and (same fix used for this author's
-  `dropbear-ssh` package) routes around cases where a Kindle's network can
-  reach Cloudflare but not GitHub's raw-content CDN directly. The full URL,
-  `https://raw.githubusercontent.com/akshaylahudkar/sysmon/main/manifest.json`,
+- **What `nealing.net` is**: a Cloudflare Worker that transparently proxies
+  this author's repos' `manifest.json`/`.kpkg` files straight from GitHub —
+  shorter to type than the raw GitHub URL, and (same fix used for this
+  author's `dropbear-ssh` package) routes around cases where a Kindle's
+  network can reach Cloudflare but not GitHub's raw-content CDN directly.
+  The full URL,
+  `https://raw.githubusercontent.com/akshaylahudkar/sysmon/main/repo-manifest.json`,
   still works too if you'd rather see exactly where you're pointing before
   typing a domain you don't recognize.
 - **Official KPM repo**: not submitted yet — planned once this has more than
