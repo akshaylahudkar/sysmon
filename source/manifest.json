@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "id": "sysmon",
+  "name": "System Monitor",
+  "author": "Akshay",
+  "description": "Live-updating battery, memory, storage, CPU and jailbreak/tools status — battery health via real capacity retention and cycle count (not just charge %), RAM and CPU load, /mnt/us storage usage, uptime, SoC temperature, and which jailbreak + tools (KPM, kterm, KOReader, KindleForge) are present. Refreshes every 4 seconds for up to ~20 minutes per launch via a background loop, no server required — pure on-device. Memory, CPU and storage stats use standard Linux /proc and df interfaces and should work on any Kindle generation; battery detection auto-finds the power_supply entry rather than hardcoding a chip name, though capacity-retention/cycle-count specifically depend on sysfs attribute names that may vary by PMIC — confirmed working on a Kindle PaperWhite 4.",
+  "version": [
+    0,
+    1,
+    0
+  ],
+  "dependencies": [],
+  "supported_platforms": [
+    "kindlehf",
+    "kindlepw2"
+  ]
+}
