@@ -21,6 +21,11 @@ $KPM launch sysmon
 (From the search bar instead, type each line separately as `;kpm ...` — see
 [Install details](#install-details) for why the commands differ slightly.)
 
+Want all of this author's Kindle packages (this + `dropbear-ssh`) from one
+`add-repo`? Use `https://nealing.net/manifest.json` instead of the URL
+above — same packages, same versions, just combined. The per-package URL
+above keeps working unchanged either way.
+
 ## What it shows
 
 - **Battery**: charge %, health, capacity retention (actual vs. design

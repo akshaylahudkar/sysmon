@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+  "id": "akshay_kindle_repo",
+  "name": "Akshay's Kindle Packages",
+  "description": "Combined repo for all of Akshay's Kindle packages — dropbear-ssh, sysmon, and anything added later. Each package's own README/source lives in its own repo (linked below); this manifest just aggregates them into one add-repo URL. The individual per-package manifests (dropbear.nealing.net, sysmon.nealing.net) keep working unchanged if you'd rather add just one.",
+  "packages": {
+    "dropbear-ssh": {
+      "name": "Dropbear SSH",
+      "author": "Akshay",
+      "description": "On-demand SSH/SFTP server (dropbear, repackaged from notmarek/kindle-usbnetlite) over your existing WiFi — no USB networking needed. A random password is generated on install and printed in the KPM log; set your own any time by editing /mnt/us/usbnetlite/etc/ssh_password and restarting the server. Verified working end-to-end (install, launch, real SSH session, survives upgrade/downgrade) on Kindle PaperWhite 4, kernel 4.1.x. Source: https://github.com/akshaylahudkar/dropbear-ssh",
+      "artifacts": [
+        {
+          "url": "https://dropbear.nealing.net/packages/dropbear-ssh/artifacts/dropbear-ssh_0.1.3_kindlehf.kpkg",
+          "version": [0, 1, 3],
+          "dependencies": [],
+          "supported_platforms": ["kindlehf"]
+        }
+      ]
+    },
+    "sysmon": {
+      "name": "System Monitor",
+      "author": "Akshay",
+      "description": "Live-updating battery, memory, storage, CPU and jailbreak/tools status — battery health via real capacity retention and cycle count (not just charge %), RAM and CPU load, /mnt/us storage usage, uptime, SoC temperature, and which jailbreak + tools (KPM, kterm, KOReader, KindleForge) are present. Refreshes every 4 seconds for up to ~20 minutes per launch via a background loop, no server required. Confirmed working on a Kindle PaperWhite 4. Source: https://github.com/akshaylahudkar/sysmon",
+      "artifacts": [
+        {
+          "url": "https://sysmon.nealing.net/packages/sysmon/artifacts/sysmon_0.1.0_kindlehf.kpkg",
+          "version": [0, 1, 0],
+          "dependencies": [],
+          "supported_platforms": ["kindlehf"]
+        }
+      ]
+    }
+  }
+}
