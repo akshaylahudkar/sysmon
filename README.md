@@ -4,6 +4,8 @@ Live battery, memory, storage, CPU and jailbreak/tools status for a
 jailbroken Kindle — a [KPM](https://github.com/KindleModding/KPM) package,
 no server required, everything runs on-device.
 
+<img src="assets/screenshot.png" alt="sysmon screenshot" width="360">
+
 ## Install
 
 Requires KPM (modern jailbreaks ship with it pre-installed). From `kterm`:
